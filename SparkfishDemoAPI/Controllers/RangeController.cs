@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SparkFishDemo.Core.Managers.Sequence;
 using SparkFishDemo.Utility.DTOs.Sequence;
 using SparkFishDemo.Utility.HttpModels.Requests.Range;
 
 namespace SparkfishDemoAPI.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   [ApiController]
   public class RangeController : ControllerBase
